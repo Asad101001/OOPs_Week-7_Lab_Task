@@ -9,7 +9,7 @@ class Vector:
     return len(self._coordinates)
 
 #Tried to use methods __getvalue__ and __setvalue__ but they won't work as expected
-#Python uses __getitem__ and __setitem__ for indexing of list operations [list[x]->actually uses list.__getitem__(x)]
+#Python uses __getitem__ and __setitem__ for indexing of list operations [ list[x]->actually uses list.__getitem__(x) ]
 
 #Getter for retrieving coordinate of dimension at index 'j' of Vector list   
  def __getitem__(self, j):

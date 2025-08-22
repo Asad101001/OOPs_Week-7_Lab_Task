@@ -12,11 +12,14 @@ class Range:
   if stop is None:
    start, stop = 0, start    
 
-#Calculate number of items in the range (fixed to handle negative steps too)   
+#Calculate number of items in the range (fixed to handle negative steps too and max(0,...) ensures calculated length is never negative)   
   if step > 0:
    self._length = max(0, (stop - start + step - 1) // step)
-  else:  # step < 0
+  else:
    self._length = max(0, (start - stop - step - 1) // (-step))
+
+#POSITIVE STEP R3(1,27,5)  = [27-1+5-1//5] = "6"
+#NEGATIVE STEP R4(20,4,-5) = [20-4-(-5)-1)//-(-5)] = [20-4+5-1//5] = "4"
 
   self._start = start
   self._step = step
@@ -31,8 +34,8 @@ class Range:
 #Returns the entry in the range at specified index 'k'
  def __getitem__(self, k):
   
-#Enables conversion of negative index e.g in a list with 4 elements list[-1]->list[3] (last element)
-  if k<0:
+#Enables conversion of negative index e.g: in a list with 4 elements list[-1] = list[3]->(last element)
+  if k < 0:
    k += len(self)
 
 #Exception Handling if specified index is out of bounds
