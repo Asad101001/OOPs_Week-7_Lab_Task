@@ -1,7 +1,7 @@
 # OOPs Week-7 Lab Task
 
 ## Overview
-This repository contains the proper code, testing and UMLs of Multidimensional Vector and Range. The objective is to also implemen Python classes that strictly follow OOP principles such as encapsulation, inheritance,  and polymorphism.
+This repository contains the proper code, testing and UMLs of Multidimensional Vector and Range. The objective is to also implement Python classes that follow OOP principles such as encapsulation, inheritance,  and polymorphism.
 
 ## Project Structure
 ```
@@ -38,7 +38,6 @@ python "n-Dimensional Vector"/main.py
 
 ###  -For Range demonstration
 ```bash
-cd ..
 
 python Range/main.py
 ```
